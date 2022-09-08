@@ -1,1 +1,1 @@
-# Praktische Aufgabe Nr. 1: Trinkreifediagramm
+# Praktische Aufgabe Nr. 2: Preisumrechner
