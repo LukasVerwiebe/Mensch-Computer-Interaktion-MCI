@@ -7,9 +7,13 @@ Erzeugen Sie in einem Fenster ein Balkendiagramm für die Anzeige der Trinkreife
 Parameter für die Erstellung des Diagramms sind der Jahrgang des Weins (Jahr der Weinlese) und die mögliche Lagerdauer sowie das aktuelle Jahr. Das Diagramm umfasst das Jahr der Weinlese, daran anschließend die Jahre der Lagerdauer und außerdem ein weiteres Jahr zur Anzeige, dass der Wein nicht mehr genießbar ist. Insgesamt werden also 1+Lagerdauer+1 Jahre angezeigt. Das obige Bild zeigt das Diagramm für den Jahrgang 2018 bei 4 Jahren Lagerdauer (2019, 2020, 2021 und 2022), der 2023 nicht mehr trinkbar ist.
 
 Die verschiedenen Stadien der Trinkreife berechnen sich in Bezug auf die Gesamtlänge aus Jahr der Weinlese plus Lagerdauer wie folgt:
+
 • Zu früh zum Trinken ist der Wein im ersten Achtel der Spanne.
+
 • In der Zeit vor dem optimalen Trinkgenuss ist der Wein geschmacklich noch steigerungsfähig.
+
 • Der Bereich für den optimalen Trinkgenuss beträgt die Hälfte der Spanne.
+
 • Im letzten Sechszehntel der Spanne lässt der Wein stark nach.
 
 Nach Ablauf der Lagerdauer ist der Wein nicht mehr genießbar. Zur Visualisierung dieses Zustandes dient ein weiteres Jahr am Ende.
