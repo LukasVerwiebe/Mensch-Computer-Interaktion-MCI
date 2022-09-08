@@ -10,17 +10,25 @@ Entwickeln Sie die Anwendung schrittweise zur vollständigen Funktionalität. In
 Schritt 1:
 
 a) Im ersten Schritt dient das Feld für den Nettoliterpreis nur zur Ausgabe und ist daher nicht editierbar. Die Pfeil nach oben-Schaltfläche ist in diesem Stadium der Bearbeitung deaktiviert.
+
 b) Wählen Sie eine sinnvolle Vorbelegung für die Flaschengröße. Einfach den ersten Wert in der Liste anzeigen zu lassen ist nicht ergonomisch.
+
 c) Erstellen Sie für das Formular ein Programm, das beim Betätigen der Pfeil nach unten-Schaltfläche aus dem als Nettoflaschenpreis eingegebenen Wert je nach ausgewählter Flaschengröße den Nettoliterpreis errechnet und im Feld anzeigt. Benutzen Sie hierfür zunächst die amerikanische Formatierung für Dezimalzahlen.
+
 d) Abhängig vom gesetzlichen Mehrwertsteuersatz sollen nach der Berechnung auch der Bruttoflaschenpreis und der Bruttoliterpreis ausgegeben werden.
+
 e) Fangen Sie Fehleingaben im Nettoflaschenpreisfeld nach Betätigen der Pfeil nach unte -Schaltfläche ab und geben Sie passende Fehlermeldungen zunächst auf der Konsole aus.
+
 f) Alle Interaktionselemente sollen in der üblichen Art mit Maus und Tastatur bedient werden können. Testen Sie auch, ob Ihr Programm auch ausschließlich mittels Tastatur bedient werden kann.
+
 g) Berücksichtigen Sie ergonomische Anforderungen. Denken Sie an die Benutzer
 
 Schritt 2:
 
 a) Ersetzen Sie die Fehlermeldungen, die auf der Konsole ausgegeben werden durch Meldungsdialoge (Alert).
+
 b) Erlauben Sie Eingaben im Feld für den Nettoliterpreis und die Umrechnung in der Gegenrichtung.
+
 c) In allen Feldern sollen Dezimalzahlen im deutschen Format mit zwei Nachkommastellen benutzt werden.
 
 Achten Sie darauf, dass Ihr Code verständlich und robust ist. Unter keinen Umständen darf in der Konsole eine Exception erscheinen. Daten wie die Flaschengrößen dürfen nur an einer einzigen Stelle gespeichert werden, an der sie leicht zu ändern sind (also nicht einerseits als die in der Klappliste angezeigten Texte und andererseits als die numerischen Werte).
