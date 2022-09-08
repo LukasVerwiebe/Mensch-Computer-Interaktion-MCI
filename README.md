@@ -3,9 +3,7 @@ Dieses Projekt beinhaltet alle Praktischen Übungen des Kurses Mensch Computer I
 
 In diesem Kurs ging es um das erlernen der Programmierung von Grafischen Oberflächen in JavaFX. Als Programmiersprache wurde dabei Java verwendet.
 
-In diesem Kurs sollte die Bedeutung von Konzeption und Dokumentation für die Programmierung mit Grafischen Oberflächen erlernt werden. Gegenüber den anderen Programmier Kursen wie z.B. Einführung in die Programmierung hat sich der Fokus von kleinteiligen Elementen der Programmierung zu achitektonischen Aspekten der Software-Entwicklung verschoben. 
-
-Besonders wichtig dabei war es zu verstehen, dass ein Programmierer Benutzungsschnittstellen erst menschengerecht konzipieren, und dann erst programmieren sollte.
+Die Studenten sollten die Bedeutung von Konzeption und Dokumentation für die Programmierung mit Grafischen Oberflächen erlernen. Gegenüber den anderen Programmier Kursen wie z.B. Einführung in die Programmierung hat sich der Fokus von kleinteiligen Elementen der Programmierung zu achitektonischen Aspekten der Software-Entwicklung verschoben. Besonders wichtig dabei war es zu verstehen, dass ein Programmierer Benutzungsschnittstellen erst menschengerecht konzipieren, und dann erst programmieren sollte.
 
 ## Themanbereiche:
 
