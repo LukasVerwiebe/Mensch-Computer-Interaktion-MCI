@@ -8,6 +8,7 @@ Klappliste für die Auswahl gängiger Weinflaschengrößen enthält. Die Flasche
 Entwickeln Sie die Anwendung schrittweise zur vollständigen Funktionalität. In den Vorlesungen vom 08.11.2021 erlernen Sie die Techniken für den ersten Schritt, erst nach dem 15.11.2021 können Sie im zweiten Schritt die noch fehlenden Funktionen einbauen.
 
 Schritt 1:
+
 a) Im ersten Schritt dient das Feld für den Nettoliterpreis nur zur Ausgabe und ist daher nicht editierbar. Die Pfeil nach oben-Schaltfläche ist in diesem Stadium der Bearbeitung deaktiviert.
 b) Wählen Sie eine sinnvolle Vorbelegung für die Flaschengröße. Einfach den ersten Wert in der Liste anzeigen zu lassen ist nicht ergonomisch.
 c) Erstellen Sie für das Formular ein Programm, das beim Betätigen der Pfeil nach unten-Schaltfläche aus dem als Nettoflaschenpreis eingegebenen Wert je nach ausgewählter Flaschengröße den Nettoliterpreis errechnet und im Feld anzeigt. Benutzen Sie hierfür zunächst die amerikanische Formatierung für Dezimalzahlen.
@@ -17,6 +18,7 @@ f) Alle Interaktionselemente sollen in der üblichen Art mit Maus und Tastatur b
 g) Berücksichtigen Sie ergonomische Anforderungen. Denken Sie an die Benutzer
 
 Schritt 2:
+
 a) Ersetzen Sie die Fehlermeldungen, die auf der Konsole ausgegeben werden durch Meldungsdialoge (Alert).
 b) Erlauben Sie Eingaben im Feld für den Nettoliterpreis und die Umrechnung in der Gegenrichtung.
 c) In allen Feldern sollen Dezimalzahlen im deutschen Format mit zwei Nachkommastellen benutzt werden.
