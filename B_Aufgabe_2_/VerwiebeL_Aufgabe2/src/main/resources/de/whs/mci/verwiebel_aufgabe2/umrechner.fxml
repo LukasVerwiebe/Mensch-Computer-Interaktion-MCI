@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.whs.mci.verwiebel_aufgabe2.UmrechnerController">
+   <children>
+      <ChoiceBox fx:id="auswahlFlaschenGroesse" layoutX="117.0" layoutY="68.0" prefHeight="25.0" prefWidth="115.0" />
+      <TextField fx:id="flaschenPreisNetto" alignment="CENTER_RIGHT" layoutX="117.0" layoutY="155.0" onKeyTyped="#leereFelderPreisProLiter" prefHeight="25.0" prefWidth="115.0" promptText="0,00" />
+      <Button fx:id="buttonNetto" layoutX="219.0" layoutY="200.0" mnemonicParsing="false" onAction="#berechneMitNettoFlaschenPreis" prefHeight="47.0" prefWidth="62.0" />
+      <TextField fx:id="preisProLiterNetto" alignment="CENTER_RIGHT" layoutX="117.0" layoutY="269.0" onKeyTyped="#leereFelderFlaschenpreis" prefHeight="25.0" prefWidth="115.0" promptText="0,00" />
+      <Button fx:id="buttonBrutto" graphicTextGap="0.0" layoutX="300.0" layoutY="200.0" mnemonicParsing="false" onAction="#berechneMitNettoPreisProLiter" prefHeight="47.0" prefWidth="62.0" />
+      <TextField fx:id="flaschenPreisBrutto" alignment="CENTER_RIGHT" disable="true" editable="false" layoutX="316.0" layoutY="155.0" prefHeight="25.0" prefWidth="115.0" promptText="0,00" />
+      <TextField fx:id="preisProLiterBrutto" alignment="CENTER_RIGHT" disable="true" editable="false" layoutX="316.0" layoutY="269.0" prefHeight="25.0" prefWidth="115.0" promptText="0,00" />
+      <Label layoutX="24.0" layoutY="159.0" prefHeight="17.0" prefWidth="77.0" text="Flaschenpreis" />
+      <Label layoutX="24.0" layoutY="273.0" prefHeight="17.0" prefWidth="77.0" text="Preis  pro l" />
+      <Label layoutX="117.0" layoutY="122.0" text="Netto" />
+      <Label layoutX="316.0" layoutY="122.0" text="Brutto" />
+      <Label layoutX="245.0" layoutY="159.0" text="€" />
+      <Label layoutX="245.0" layoutY="273.0" text="€" />
+      <Label layoutX="444.0" layoutY="159.0" text="€" />
+      <Label layoutX="441.0" layoutY="273.0" text="€" />
+      <Label layoutX="24.0" layoutY="72.0" text="Flaschengröße" />
+   </children>
+</AnchorPane>

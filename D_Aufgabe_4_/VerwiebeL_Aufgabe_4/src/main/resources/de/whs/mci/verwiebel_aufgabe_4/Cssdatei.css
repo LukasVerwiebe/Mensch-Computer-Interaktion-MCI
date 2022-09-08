@@ -1,0 +1,63 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 19.10.2021, 19:00:02
+    Author     : Lukas Verwiebe
+*/
+
+#hbox1 {
+       
+}
+
+#hbox2 {
+    -fx-border-style:solid;
+}
+
+#hbox3 {
+    -fx-border-style:solid;    
+}
+
+#hbox4 {
+    -fx-border-style:solid;
+    -fx-border-color:red;
+}
+
+#rect1 {
+    -fx-fill: linear-gradient(from 0% 50% to 100% 50%, silver, lime);
+}
+
+#rect2 {
+    -fx-fill: linear-gradient(from 0% 50% to 100% 50%, lime, lime);
+}
+
+#rect3 {
+    -fx-fill: linear-gradient(from 0% 50% to 100% 50%, yellow, yellow);
+}
+
+#rect4 {
+    -fx-fill: linear-gradient(from 0% 50% to 100% 50%, silver, silver);
+}
+
+#rect5 {
+    -fx-fill: linear-gradient(from 0% 50% to 100% 50%, lime, yellow);
+}
+
+#rect6 {
+    -fx-fill:#f0f0f0;
+    -fx-stroke:#f0f0f0;
+}
+
+#rect7 {
+    -fx-fill:#f0f0f0;
+    -fx-stroke:#f0f0f0;
+}
+
+#body{
+    -fx-background:#f0f0f0;
+}
+
+.custom {
+  -fx-background-color:rgba(255, 100, 20, 0.5);
+}

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<TabPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="795.0" prefWidth="895.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.whs.mci.verwiebel_aufgabe_4.WeinEingabeFormularController">
+  <tabs>
+    <Tab fx:id="weindatenTab" text="Weindaten">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="714.0" prefWidth="977.0">
+               <children>
+                  <TitledPane fx:id="weindaten" animated="false" layoutX="38.0" layoutY="14.0" prefHeight="160.0" prefWidth="403.0" text="Weindaten">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="137.0" prefWidth="437.0">
+                           <children>
+                              <TextField fx:id="bestellnummer" layoutX="25.0" layoutY="31.0" onKeyTyped="#feldFarbeSetzten" promptText="0000-BBBB-ZZZ" />
+                              <Label layoutX="25.0" layoutY="71.0" mnemonicParsing="true" text="_Weinname: " />
+                              <Label layoutX="25.0" layoutY="12.0" mnemonicParsing="true" text="_Bestellnummer: " />
+                              <TextField fx:id="weinname" layoutX="25.0" layoutY="90.0" onKeyTyped="#feldFarbeSetzten" prefHeight="25.0" prefWidth="325.0" />
+                              <RadioButton fx:id="farbeWeiss" layoutX="189.0" layoutY="33.0" onAction="#farbauswahl" text="_Weiß">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="farbe" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="farbeRot" layoutX="250.0" layoutY="33.0" onAction="#farbauswahl" selected="true" text="R_ot" toggleGroup="$farbe" />
+                              <RadioButton fx:id="farbeRose" layoutX="303.0" layoutY="33.0" onAction="#farbauswahl" text="Ro_sé" toggleGroup="$farbe" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+                  <TitledPane fx:id="anbaugebiet" animated="false" layoutX="38.0" layoutY="185.0" prefHeight="102.0" prefWidth="403.0" text="Anbaugebiet">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="74.0" prefWidth="402.0">
+                           <children>
+                              <ChoiceBox fx:id="anbauLand" layoutX="22.0" layoutY="28.0" prefWidth="150.0" />
+                              <Label layoutX="22.0" layoutY="9.0" mnemonicParsing="true" text="_Land: " />
+                              <Label layoutX="221.0" layoutY="9.0" mnemonicParsing="true" text="_Region: " />
+                              <ChoiceBox fx:id="anbauRegion" layoutX="221.0" layoutY="28.0" prefWidth="150.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+                  <TitledPane fx:id="reifediagrammEingabe" animated="false" layoutX="38.0" layoutY="299.0" prefHeight="138.0" prefWidth="403.0" text="Reifediagramm Eingabe">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="401.0">
+                           <children>
+                              <Label layoutX="24.0" layoutY="26.0" mnemonicParsing="true" text="_Jahrgang: " />
+                              <TextField fx:id="jahrgangText" alignment="CENTER_RIGHT" layoutX="24.0" layoutY="45.0" onKeyTyped="#feldFarbeSetzten" />
+                              <TextField fx:id="dauerText" alignment="CENTER_RIGHT" layoutX="214.0" layoutY="45.0" onKeyTyped="#feldFarbeSetzten" />
+                              <Label layoutX="214.0" layoutY="26.0" mnemonicParsing="true" text="L_agerdauer: " />
+                              <Button disable="true" layoutX="24.0" layoutY="73.0" mnemonicParsing="false" onAction="#switchToDiagramm" prefHeight="25.0" prefWidth="150.0" text="Diagramm erstellen" visible="false" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+                  <TitledPane fx:id="umrechner" animated="false" layoutX="456.0" layoutY="14.0" prefHeight="273.0" prefWidth="403.0" text="Umrechner">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="239.0" prefWidth="401.0">
+                           <children>
+                              <ChoiceBox fx:id="auswahlFlaschenGroesse" layoutX="25.0" layoutY="26.0" prefWidth="150.0" />
+                              <Label layoutX="25.0" layoutY="7.0" mnemonicParsing="true" text="_Flaschengröße in Liter: " />
+                              <TextField fx:id="flaschenPreisNetto" alignment="CENTER_RIGHT" layoutX="25.0" layoutY="83.0" onKeyTyped="#richtungMitNettoFlaschenPreis" promptText="0,00" />
+                              <TextField fx:id="flaschenPreisBrutto" alignment="CENTER_RIGHT" layoutX="228.0" layoutY="83.0" onKeyTyped="#richtungMitBruttoFlaschenPreis" promptText="0,00" />
+                              <Button fx:id="buttonNetto" disable="true" layoutX="156.0" layoutY="121.0" mnemonicParsing="false" onAction="#berechneMitNettoFlaschenPreis" prefHeight="47.0" prefWidth="62.0" visible="false" />
+                              <Label layoutX="25.0" layoutY="60.0" mnemonicParsing="true" text="_Preis pro Flasche netto: " />
+                              <Label layoutX="228.0" layoutY="60.0" mnemonicParsing="true" text="Preis pro _Flasche brutto: " />
+                              <TextField fx:id="preisProLiterNetto" alignment="CENTER_RIGHT" layoutX="25.0" layoutY="194.0" onKeyTyped="#richtungMitNettoPreisProLiter" promptText="0,00" />
+                              <TextField fx:id="preisProLiterBrutto" alignment="CENTER_RIGHT" layoutX="228.0" layoutY="194.0" onKeyTyped="#richtungMitBruttoPreisProLiter" promptText="0,00" />
+                              <Label layoutX="25.0" layoutY="171.0" mnemonicParsing="true" text="L_iterpreis netto: " />
+                              <Label layoutX="228.0" layoutY="171.0" mnemonicParsing="true" text="Literpreis br_utto: " />
+                              <Button fx:id="buttonBrutto" disable="true" layoutX="228.0" layoutY="121.0" mnemonicParsing="false" onAction="#berechneMitNettoPreisProLiter" prefHeight="47.0" prefWidth="62.0" visible="false" />
+                              <Label layoutX="179.0" layoutY="87.0" text="€" />
+                              <Label layoutX="180.0" layoutY="198.0" text="€" />
+                              <Label layoutX="382.0" layoutY="87.0" text="€" />
+                              <Label layoutX="381.0" layoutY="198.0" text="€" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+                  <TitledPane fx:id="alkoholgehalt" animated="false" layoutX="456.0" layoutY="299.0" prefHeight="138.0" prefWidth="405.0" text="Alkoholgehalt">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <CheckBox fx:id="alkoholnullprozent" layoutX="17.0" layoutY="15.0" onAction="#nullProzentAlkohol" text="0%" />
+                              <CheckBox fx:id="slideraktivieren" layoutX="91.0" layoutY="15.0" onAction="#alkoholSliderAktivieren" text="_Slider aktivieren?" />
+                              <TextField fx:id="alkoholGehalt" layoutX="280.0" layoutY="11.0" onKeyTyped="#feldFarbeSetzten" prefHeight="25.0" prefWidth="87.0" />
+                              <Slider fx:id="alkoholgehaltSlider" blockIncrement="0.5" layoutX="17.0" layoutY="49.0" majorTickUnit="0.5" max="25.0" min="7.0" minorTickCount="0" prefHeight="14.0" prefWidth="370.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+                              <Label layoutX="378.0" layoutY="15.0" text="\%" />
+                              <Label fx:id="alkoholgehaltAnzeige" layoutX="280.0" layoutY="90.0" prefHeight="17.0" prefWidth="70.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+                  <TextArea fx:id="beschreibung" layoutX="38.0" layoutY="478.0" prefHeight="193.0" prefWidth="818.0" />
+                  <Button layoutX="547.0" layoutY="712.0" mnemonicParsing="false" onAction="#speichern" prefWidth="150.0" text="Speichern" />
+                  <Button fx:id="abbrechen" layoutX="709.0" layoutY="712.0" mnemonicParsing="false" onAction="#beenden" prefWidth="150.0" text="Abbrechen" />
+                  <Label layoutX="38.0" layoutY="459.0" mnemonicParsing="true" text="Wein Beschreibun_g" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab fx:id="reifediagrammTab" onSelectionChanged="#switchToDiagramm" text="Reifediagramm">
+      <content>
+        <AnchorPane id="body" minHeight="0.0" minWidth="0.0" prefHeight="303.0" prefWidth="675.0" stylesheets="@Cssdatei.css">
+               <children>
+                  <HBox id="hbox1" layoutX="-326.0" layoutY="174.0" prefHeight="100.0" prefWidth="1100.0" stylesheets="@Cssdatei.css">
+                     <children>
+                        <Rectangle id="hbox1" fx:id="startJahr" arcHeight="5.0" arcWidth="5.0" fill="#f2f0f0" height="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" />
+                        <Rectangle id="rect4" fx:id="rectZuFrueh" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" />
+                        <Rectangle id="rect1" fx:id="rectSteigeungsfaehig" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" />
+                        <Rectangle id="rect2" fx:id="rectOptimal" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" />
+                        <Rectangle id="rect5" fx:id="rectLaesstNach" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" />
+                        <Rectangle id="rect3" fx:id="rectUngenießbar" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" />
+                     </children>
+                  </HBox>
+                  <HBox id="hbox3" layoutX="174.0" layoutY="174.0" prefHeight="100.0" prefWidth="249.0" stylesheets="@Cssdatei.css" />
+                  <HBox id="hbox4" layoutX="423.0" layoutY="174.0" prefHeight="100.0" prefWidth="52.0" stylesheets="@Cssdatei.css" />
+                  <HBox id="hbox3" layoutX="475.0" layoutY="174.0" prefHeight="100.0" prefWidth="249.0" stylesheets="@Cssdatei.css" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f0f0" height="100.0" layoutX="-26.0" layoutY="174.0" stroke="#f2f0f0" strokeType="INSIDE" width="200.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f0f0" height="100.0" layoutX="724.0" layoutY="174.0" stroke="#f2f0f0" strokeType="INSIDE" width="200.0" />
+                  <HBox layoutX="124.0" layoutY="277.0" prefHeight="17.0" prefWidth="650.0">
+                     <children>
+                        <Label fx:id="jahrStartRand" prefWidth="50.0" />
+                        <Label fx:id="jahresAnzeige0" prefWidth="50.0" />
+                        <Label fx:id="jahresAnzeige1" prefWidth="50.0" />
+                        <Label fx:id="jahresAnzeige2" prefWidth="50.0" />
+                        <Label fx:id="jahresAnzeige3" prefWidth="50.0" />
+                        <Label fx:id="jahresAnzeige4" prefWidth="50.0" />
+                        <Label fx:id="aktuellesJahr" prefWidth="50.0" />
+                        <Label fx:id="jahresAnzeige5" prefWidth="50.0" />
+                        <Label fx:id="jahresAnzeige6" prefWidth="50.0" />
+                        <Label fx:id="jahresAnzeige7" prefWidth="50.0" />
+                        <Label fx:id="jahresAnzeige8" prefWidth="50.0" />
+                        <Label fx:id="jahresAnzeige9" prefWidth="50.0" />
+                        <Label fx:id="jahrEndRand" prefWidth="50.0" />
+                     </children>
+                  </HBox>
+                  <Label fx:id="jahrgang" layoutX="83.0" layoutY="47.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lagerdauer" layoutX="420.0" layoutY="47.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

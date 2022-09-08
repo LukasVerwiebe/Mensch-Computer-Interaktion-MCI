@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.whs.mci.verwiebel_aufgabe_4.MainWindowController">
+   <children>
+      <TableView fx:id="tableView" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="columnEins" prefWidth="107.0" text="Bestellnummer" />
+          <TableColumn fx:id="columnZwei" prefWidth="90.0" text="Jahrgang" />
+            <TableColumn fx:id="columnDrei" prefWidth="176.0" text="Name" />
+            <TableColumn fx:id="columnVier" prefWidth="85.0" text="Farbe" />
+            <TableColumn fx:id="columnFuenf" prefWidth="141.0" text="Bruttoflaschenpreis" />
+        </columns>
+      </TableView>
+      <Button layoutX="123.0" layoutY="361.0" mnemonicParsing="false" onAction="#zeileEntfernen" prefHeight="25.0" prefWidth="121.0" text="Test" />
+   </children>
+</AnchorPane>
